@@ -13,11 +13,11 @@ CREATE TABLE products (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
   description VARCHAR(255),
-  stock_quanity INT,
+  stock_quantity INT,
   cost INT,
-  selling_price INT 
-  mark_up INT
-  manuf_id REFERENCES manufs(id) 
+  selling_price INT,
+  mark_up INT,
+  manuf_id INT REFERENCES manufs(id) 
   
 );
 

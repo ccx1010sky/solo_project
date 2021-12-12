@@ -1,4 +1,5 @@
 class Manuf:
-    def __init__(self,name,info):
+    def __init__(self,name,info,id = None):
         self.name = name
         self.info = info
+        self.id = id
