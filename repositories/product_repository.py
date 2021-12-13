@@ -26,7 +26,7 @@ def select_all():
 
     for row in results:
         manuf = manuf_repository.select(row['manuf_id'])
-        product = product(row['name'], row['description'], row['stock_quantity'], row['cost'],row['selling_price'],row['mark_up'],manuf,row['id'] )
+        product = Product(row['name'], row['description'], row['stock_quantity'], row['cost'],row['selling_price'],row['mark_up'],manuf,row['id'] )
         products.append(product)
     return products
 
@@ -51,7 +51,7 @@ def delete(id):
 
 
 def update(product):
-    sql = "UPDATE products SET (name, description, stock_quantity, cost,selling_price,mark_up,manuf_id) VALUES (%s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
-    values = [product.name, product.description, product.stock_quantity,product.cost,product.selling_price,product.mark_up product.manuf.id, product.id]
+    sql = "UPDATE products SET (name, description, stock_quantity, cost,selling_price,mark_up,manuf_id) = (%s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
+    values = [product.name, product.description, product.stock_quantity,product.cost,product.selling_price,product.mark_up,product.manuf.id, product.id]
     print(values)
     run_sql(sql, values)

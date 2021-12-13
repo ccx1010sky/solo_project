@@ -8,3 +8,6 @@ class Product:
         self.mark_up = mark_up
         self.manuf = manuf
         self.id = id
+
+
+    # type of manuf is class
