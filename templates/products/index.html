@@ -1,17 +1,28 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    
-<h1>Products List1 </h1>
-<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium quibusdam quasi dicta, culpa est natus earum similique dolores expedita nemo.
-    <br>
-    <br>
-    
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea corrupti laudantium ullam omnis rem, exercitationem asperiores corporis fugiat consequuntur deserunt ad? Mollitia sed nesciunt, ab laboriosam laudantium officiis alias fugit.</p>
-</p>
-
-<hr>
 
 
+{% for product in all_products %}
+  <div class="product">
+    <div class="content">
+      <a href="/products/{{product.id}}">{{product.name}}</a>
+      <div class="name">
+        {{product.description}}
+        {{product.stock_quantity}}
+        {{product.cost}}
+        {{product.selling_price}}
+        {{product.mark_up}}
+        <p><i>{{product.manuf.name}}</i></p>
+      </div>
+      <div class="buttons">
+
+        <form class="delete-form" action="/products/{{product.id}}/delete" method="POST">
+          <button class="trash-button">delete</button>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endfor %}
 
 {% endblock %}

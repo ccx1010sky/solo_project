@@ -18,6 +18,5 @@ CREATE TABLE products (
   selling_price INT,
   mark_up INT,
   manuf_id INT REFERENCES manufs(id) 
-  
 );
 

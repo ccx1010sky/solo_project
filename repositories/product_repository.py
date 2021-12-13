@@ -37,12 +37,12 @@ def select(id):
 
     if result is not None:
         manuf = manuf_repository.select(result['manuf_id'])
-        product = product(result['name'], result['description'], result['stock_quantity'], result['cost'],result['selling_price'],result['mark_up'],manuf,result['id'] )
+        product = Product(result['name'], result['description'], result['stock_quantity'], result['cost'],result['selling_price'],result['mark_up'],manuf,result['id'] )
     return product
 
 # UPDATE /EDIT
 def update(product):
-    sql = "UPDATE products SET (name, description, stock_quantity, cost,selling_price,mark_up,manuf_id) = (%s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
+    sql = "UPDATE products SET (name,description, stock_quantity, cost,selling_price,mark_up,manuf_id) = (%s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
     values = [product.name, product.description, product.stock_quantity,product.cost,product.selling_price,product.mark_up,product.manuf.id, product.id]
     print(values)
     run_sql(sql, values)
