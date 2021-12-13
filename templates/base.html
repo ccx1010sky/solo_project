@@ -11,8 +11,40 @@
     <title>Shop Inventory</title>
   </head>
   <body>
-    <h1>Shop Inventory Admin</h1>
+    <header>
+      <h1>Shop Inventory Admin</h1>
+      <nav>
+        <li>Products List</li>
+        <li>Add new product</li>
+        <li>Delete product</li>
+        <li>Edit product</li>
+        <li>Manufactory List</li>
+        <li>Add Manufactory</li>
+        <li>Delete Manufactory</li>
+        <li>Edit Manufactory</li>
+      </nav>
+    </header>
+    <hr />
 
-    {% block content %} {% endblock %}
+<main>
+    <section class="main">
+        <H1>Products List</H1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam consectetur cupiditate nisi nulla, officia iusto, eaque praesentium quae eveniet, qui consequuntur recusandae nemo dolores modi totam enim? Cum sint libero inventore molestiae eveniet aliquam voluptates provident sit, ex atque sapiente.</p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt cumque quis, aut natus quasi facere. Quis, laborum, dolorem laudantium nisi error maiores aperiam atque cum officia vel illo itaque earum?
+        </p>
+        {% block content %} 
+        
+        {% endblock %}
+        
+    </section>
+    <hr>
+    {% block products %}
+        
+    {% endblock products %}
+</main>
+<footer>
+    <h1>footer</h1>
+</footer>
   </body>
 </html>
