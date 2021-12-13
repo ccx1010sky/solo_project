@@ -31,12 +31,12 @@
 
 
   <div>
-    <label for="manuf">Author:</label>
+    <label for="manuf">Manufactory:</label>
     <select id="manuf" name="manuf_id">
-      {% for manuf in all_authors %}
+      {% for manuf in all_manufs %}
         <option value="{{ manuf.id }}"
           {% if product.manuf.id == manuf.id %} selected="selected"{% endif %}>
-          {{ manuf.name() }}
+          {{ manuf.name }}
         </option>
       {% endfor %}
     </select>

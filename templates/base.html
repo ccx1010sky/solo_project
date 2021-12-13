@@ -14,14 +14,11 @@
     <header>
       <h1>Shop Inventory Admin</h1>
       <nav>
-        <li>Products List</li>
-        <li>Add new product</li>
-        <li>Delete product</li>
-        <li>Edit product</li>
+        <li><a href="/products">Products List</a> </li>
+        <li><a href="/products/new_product">Add new product</a></li>
+
         <li>Manufactory List</li>
         <li>Add Manufactory</li>
-        <li>Delete Manufactory</li>
-        <li>Edit Manufactory</li>
       </nav>
     </header>
     <hr />
@@ -41,16 +38,12 @@
           quis, aut natus quasi facere. Quis, laborum, dolorem laudantium nisi
           error maiores aperiam atque cum officia vel illo itaque earum?
         </p>
-        {% block home %} 
-        
-        {% endblock %}
-
-
+        {% block home %} {% endblock %}
       </section>
       <hr />
       {% block content %} {% endblock %}
     </main>
-    
+
     <footer>
       <h1>footer</h1>
     </footer>
