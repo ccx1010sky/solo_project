@@ -2,7 +2,9 @@ from db.run_sql import run_sql
 from models.product import Product
 from models.manuf import Manuf
 
-
+# CRUD
+# -------------------
+# CREATE
 def save(manuf):
     sql = "INSERT INTO manufs (name, info) VALUES (%s, %s) RETURNING *"
     values = [manuf.name, manuf.info]
@@ -11,11 +13,19 @@ def save(manuf):
     manuf.id = id
     return manuf
 
+# -----------------------------------------------
+# READ
+def select_all():
+    manufs = []
 
-def delete_all():
-    sql = "DELETE  FROM manufs"
-    run_sql(sql)
+    sql = "SELECT * FROM manufs"
+    results = run_sql(sql)
 
+    for row in results:
+        manuf = Manuf(row['name'], row['info'], row['id'] )
+        manufs.append(manuf)
+    return manufs
+# READ
 def select(id):
     manuf = None
     sql = "SELECT * FROM manufs WHERE id = %s"
@@ -26,24 +36,26 @@ def select(id):
         manuf = Manuf(result['name'], result['info'], result['id'] )
     return manuf
 
-
-def delete_all():
-    sql = "DELETE  FROM manufs"
-    run_sql(sql)
-
-
-def delete(id):
-    sql = "DELETE  FROM manufs WHERE id = %s"
-    values = [id]
-    run_sql(sql, values)
-
-
+# -----------------------------------------
+# UPDATE
 def update(manuf):
     sql = "UPDATE authors SET (name, info) = (%s, %s) WHERE id = %s"
     values = [manuf.name, manuf.info, manuf.id]
     run_sql(sql, values)
 
-# 
+# -----------------------------------
+# DELETE
+def delete_all():
+    sql = "DELETE  FROM manufs"
+    run_sql(sql)
+
+# DELETE
+def delete(id):
+    sql = "DELETE  FROM manufs WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+
+# _______________________________
 def products(manuf):
     products = []
 
