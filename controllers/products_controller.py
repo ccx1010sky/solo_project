@@ -36,6 +36,22 @@ def create_products():
     new_product = product_repository.save(product)
     return redirect("/products")
 
+# SHOW
+# GET '/products/<id>'
+@products_blueprint.route("/products/<id>", methods=['GET'])
+def show_product(id):
+    product = product_repository.select(id)
+    return render_template('products/show.html', product = product)
+
+# EDIT
+# GET '/products/<id>/edit'
+@products_blueprint.route("/products/<id>/edit", methods=['GET'])
+def edit_book(id):
+    product = product_repository.select(id)
+    manufs = manuf_repository.select_all()
+    return render_template('products/edit.html', product = product, all_manufs = manufs)
+
+
 
 
 

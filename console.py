@@ -5,8 +5,8 @@ import repositories.product_repository as product_repository
 import repositories.manuf_repository as manuf_repository
 
 
-# product_repository.delete_all()
-# manuf_repository.delete_all()
+product_repository.delete_all()
+manuf_repository.delete_all()
 
 manuf_1 = Manuf( "manuf1","Glasgow_manuf")
 manuf_2 = Manuf( "manuf2","Edinburgh_manuf")
