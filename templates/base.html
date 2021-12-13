@@ -26,29 +26,33 @@
     </header>
     <hr />
 
-<main>
-    <section class="main">
-        <H1>Products List</H1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam consectetur cupiditate nisi nulla, officia iusto, eaque praesentium quae eveniet, qui consequuntur recusandae nemo dolores modi totam enim? Cum sint libero inventore molestiae eveniet aliquam voluptates provident sit, ex atque sapiente.</p>
+    <main>
+      <section class="main">
+        <h1>Products List</h1>
         <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt cumque quis, aut natus quasi facere. Quis, laborum, dolorem laudantium nisi error maiores aperiam atque cum officia vel illo itaque earum?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+          consectetur cupiditate nisi nulla, officia iusto, eaque praesentium
+          quae eveniet, qui consequuntur recusandae nemo dolores modi totam
+          enim? Cum sint libero inventore molestiae eveniet aliquam voluptates
+          provident sit, ex atque sapiente.
         </p>
-        {% block content %} 
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt cumque
+          quis, aut natus quasi facere. Quis, laborum, dolorem laudantium nisi
+          error maiores aperiam atque cum officia vel illo itaque earum?
+        </p>
+        {% block home %} 
         
         {% endblock %}
+
         
-    </section>
-    <hr>
-    {% block products %}
-        
-    {% endblock products %}
+      </section>
+      <hr />
+      {% block content %} {% endblock %}
+    </main>
     
-    {% block addnew %}
-        
-    {% endblock addnew %}
-</main>
-<footer>
-    <h1>footer</h1>
-</footer>
+    <footer>
+      <h1>footer</h1>
+    </footer>
   </body>
 </html>
