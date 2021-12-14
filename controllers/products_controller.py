@@ -6,6 +6,8 @@ import repositories.manuf_repository as manuf_repository
 
 products_blueprint = Blueprint("products", __name__)
 
+
+
 # 总结：route的第一个参数与form中的action对应，或与href中的连接对应。
 # id等参数由html中传入到controller.py中
 
@@ -19,9 +21,10 @@ def products():
 # GET '/products/new_product'
 # OK
 @products_blueprint.route("/products/new_product", methods=['GET'])
-def new_book():
+def new_product():
     manufs = manuf_repository.select_all()
     return render_template("products/new_product.html", all_manufs = manufs)
+    # return render_template("manuf/index.html", all_manufs = manufs)
 
 # OK
 @products_blueprint.route("/products",methods=['POST'])
@@ -86,6 +89,8 @@ def update_product(id):
 def delete_product(id):
     product_repository.delete(id)
     return redirect('/products')
+
+
 
 
 

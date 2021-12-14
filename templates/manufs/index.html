@@ -1,0 +1,16 @@
+{% extends 'base.html' %} 
+{% block content %} 
+{% for manuf in all_manufs %}
+<div class="manuf">
+  <div class="content">
+    <a href="/manufs/{{manuf.id}}">{{manuf.name}}</a>
+    <div class="name">{{manuf.info}}</div>
+    <div class="buttons">
+      <form class="delete-form" action="/manufs/{{manuf.id}}/delete" method="POST">
+        <button class="trash-button">delete</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endfor %} 
+{% endblock %}
