@@ -39,7 +39,7 @@ def select(id):
 # -----------------------------------------
 # UPDATE
 def update(manuf):
-    sql = "UPDATE authors SET (name, info) = (%s, %s) WHERE id = %s"
+    sql = "UPDATE manufs SET (name, info) = (%s, %s) WHERE id = %s"
     values = [manuf.name, manuf.info, manuf.id]
     run_sql(sql, values)
 
@@ -56,6 +56,8 @@ def delete(id):
     run_sql(sql, values)
 
 # _______________________________
+
+# 显示某个manuf下的所有产品
 def products(manuf):
     products = []
 

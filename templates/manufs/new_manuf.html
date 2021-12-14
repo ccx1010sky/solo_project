@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<H1>new manuf</H1>
+
+<form action="/manufs" method="post">
+
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Name" required autofocus>
+  </div>
+
+  <div>
+    <label for="info">Info:</label>
+    <input type="text" id="info" name="info" placeholder="Info" required autofocus>
+  </div>
+
+  <button type="submit">Add Manufactory</button>
+</form>
+
+    
+{% endblock  %}

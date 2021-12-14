@@ -1,0 +1,12 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+<div>
+  <p>{{manuf.name}}</p>
+
+  <p>{{manuf.description}}</p>
+  
+  <p><a href="/manufs/{{manuf.id}}/edit">Edit</a></p>
+</div>
+
+{% endblock %}

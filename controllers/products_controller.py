@@ -16,17 +16,19 @@ products_blueprint = Blueprint("products", __name__)
 def products():
     products =product_repository.select_all()
     return render_template("products/index.html", all_products = products )
-
+# -------------------------------------------------------------
 # ADD_NEW
 # GET '/products/new_product'
 # OK
+# 
 @products_blueprint.route("/products/new_product", methods=['GET'])
 def new_product():
     manufs = manuf_repository.select_all()
     return render_template("products/new_product.html", all_manufs = manufs)
-    # return render_template("manuf/index.html", all_manufs = manufs)
 
+#CREATE A PRODUCT
 # OK
+# 接收页面表格信息，并写入数据库
 @products_blueprint.route("/products",methods=['POST'])
 def create_products():
     name = request.form['name']
@@ -38,13 +40,11 @@ def create_products():
     # 
     manuf = manuf_repository.select(request.form['manuf_id'])
     product = Product(name,description,stock_quantity,cost,selling_price,mark_up,manuf)
-    product_repository.save(product)
-
     new_product = product_repository.save(product)
     return redirect("/products")
 # -----------------------------------------------------
 
-# SHOW
+# SHOW with select id
 # GET '/products/<id>'
 # ok
 # 当页面上按product连接时，页面上对应的product的id被捕捉，并执行页面上的<a href="/products/{{product.id}}">， 这个动作匹配route中的"/products/<id>"，由自定义函数show_product(id)来处理。
