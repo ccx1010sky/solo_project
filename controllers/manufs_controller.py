@@ -9,7 +9,7 @@ manufs_blueprint = Blueprint("manufs", __name__)
 
 
 # show all manufs on the web
-@manufs_blueprint.route("/manufs" , methods=['GET'])
+@manufs_blueprint.route("/manufs")
 def manufs():
     manufs =manuf_repository.select_all()
     return render_template("manufs/index.html", all_manufs = manufs )
