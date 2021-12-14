@@ -6,27 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='style.css') }}"
+      href="{{ url_for('static', filename='css/style.css') }}"
     />
     <title>Shop Inventory</title>
   </head>
   <body>
     <header>
-      <h1>Shop Inventory Admin</h1>
-      <nav>
-        <ul>
-          <li><a href="/products">Products List</a></li>
-          <li><a href="/products/new_product">Add new product</a></li>
-
-          <li><a href="/manufs">Manufactory List</a></li>
-          <li><a href="/manufs/new_manuf">Add Manufactory</a></li>
-        </ul>
-      </nav>
+      <section class="header-content">
+        <h1>Shop Inventory Admin</h1>
+        <nav>
+          <ul>
+            <li><a href="/products">Products List</a></li>
+            <li><a href="/products/new_product">Add new product</a></li>
+            <li><a href="/manufs">Manufactory List</a></li>
+            <li><a href="/manufs/new_manuf">Add Manufactory</a></li>
+          </ul>
+        </nav>
+      </section>
     </header>
     <hr />
 
     <main>
-      <section class="main">
+      <section class='about'>
         <h1>About</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
@@ -40,14 +41,13 @@
           quis, aut natus quasi facere. Quis, laborum, dolorem laudantium nisi
           error maiores aperiam atque cum officia vel illo itaque earum?
         </p>
-        {% block home %} {% endblock %}
+        {% block home %} 
+        {% endblock %}
       </section>
       <hr />
       {% block content %} {% endblock %}
     </main>
 
-    <footer>
-      <h1>footer</h1>
-    </footer>
+    
   </body>
 </html>

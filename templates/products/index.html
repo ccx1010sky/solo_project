@@ -1,8 +1,11 @@
-{% extends 'base.html' %} {% block content %} {% for product in all_products %}
+{% extends 'base.html' %} 
+{% block content %} 
+
+{% for product in all_products %}
 <div class="product">
   <div class="content">
     <div class="name">
-      <table class="table">
+      <table>
         <tr>
           <th>Name</th>
           <th>Description</th>
@@ -37,4 +40,5 @@
     </div>
   </div>
 </div>
-{% endfor %} {% endblock %}
+{% endfor %} 
+{% endblock %}
