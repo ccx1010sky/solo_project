@@ -45,3 +45,7 @@ ul li a{
 
 
 }
+table, th, td {
+  border: 3px solid darkslategray;
+  color:darkgoldenrod;
+}
