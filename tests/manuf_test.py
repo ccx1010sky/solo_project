@@ -8,8 +8,6 @@ class TestManuf(unittest.TestCase):
         self.manuf_1 = Manuf( "manuf1","Glasgow_manuf")
         self.manuf_2 = Manuf( "manuf2","Edinburgh_manuf")
         
-        # self.product_1 = Product("Apple","Fruit",50,1,2,100,manuf_1)
-        # self.product_2 = Product("Pear","Fruit",50,1,2,100,manuf_1)
 
     
     
