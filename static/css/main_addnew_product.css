@@ -1,4 +1,9 @@
 /* add new product */
+.container-1 {
+  width: 50vw;
+  margin: 0 auto;
+}
+
 .submit-form {
   align-items: center;
   justify-content: center;
@@ -8,10 +13,14 @@
   display: block;
 }
 
+.submit-form input{
+  width: 450px;
+}
+
 .add-manuf {
   display: block;
 }
-.add-manuf lable {
+.add-manuf label {
   display: block;
 }
 .add-manuf div {

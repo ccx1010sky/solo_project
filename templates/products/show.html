@@ -1,16 +1,29 @@
 {% extends 'base.html' %} 
 {% block content %}
+<section class="show-2">
+  <div>
+
+    <h1>About the {{product.name}}</h1>
+
+    <br>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum illum autem ab ipsum mollitia modi velit provident! Explicabo eum eligendi, praesentium assumenda molestias vitae, soluta minima placeat, laudantium recusandae mollitia?</p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam aliquid reiciendis, rerum error vitae, nisi repellat, illo voluptatum officia quisquam et repudiandae ad est quos quasi. Adipisci ducimus cupiditate amet necessitatibus odio soluta placeat sunt ut, maxime modi temporibus aliquam cumque aut a voluptas. Optio dicta, reiciendis officia eaque perferendis, suscipit consequatur odio sed quaerat libero, dolorum aspernatur accusamus explicabo! Earum distinctio animi est voluptas accusantium. Ut nostrum fuga nihil culpa, minima repudiandae quasi saepe dolores. Atque soluta assumenda ipsum. Commodi aut officia obcaecati doloribus ut molestiae modi tempora, numquam unde iusto nulla fuga sit velit odio omnis. Iste, quo.
+    </p>
+  </div>
 
 <div>
-  <p>{{product.name}}</p>
+  <!-- <p>{{product.name}}</p>
 
   <p>{{product.description}}</p>
   <p>{{product.stock_quantity}}</p>
   <p>{{product.cost}}</p>
   <p>{{product.selling_price}}</p>
   <p>{{product.mark_up}}</p>
-  <p>{{product.manuf.name}}</p>
+  <p>{{product.manuf.name}}</p> -->
   <p><a href="/products/{{product.id}}/edit">Edit</a></p>
 </div>
+
+</section>
 
 {% endblock %}

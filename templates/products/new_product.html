@@ -1,45 +1,72 @@
-{% extends 'base.html' %}
-
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 <section class="container-1">
-  
-  <form class="submit-form"action="/products" method="post">
-    
+  <div>
+    <h1>add new product</h1>
+    <br />
+  </div>
+
+  <form class="submit-form" action="/products" method="post">
     <label for="name">Name:</label>
-    <input type="text" id="name" name="name" placeholder="Name" required autofocus>
-    
+    <input
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Name"
+      required
+      autofocus
+    />
+
     <label for="description">Description:</label>
-    <input type="text" id="description" name="description" placeholder="Description" required autofocus>
-    
+    <input
+      type="text"
+      id="description"
+      name="description"
+      placeholder="Description"
+      required
+      autofocus
+    />
+
     <label for="stock_quantity">Stock_quantity:</label>
-    <input type="number" id="stock_quantity" name="stock_quantity" placeholder="stock_quantity" required>
-    
+    <input
+      type="number"
+      id="stock_quantity"
+      name="stock_quantity"
+      placeholder="stock_quantity"
+      required
+    />
+
     <label for="cost">Cost:</label>
-    <input type="number" id="cost" name="cost" placeholder="Cost" required>
-    
+    <input type="number" id="cost" name="cost" placeholder="Cost" required />
+
     <label for="selling_price">Selling_price:</label>
-    <input type="number" id="selling_price" name="selling_price" placeholder="Selling_price" required>
-    
+    <input
+      type="number"
+      id="selling_price"
+      name="selling_price"
+      placeholder="Selling_price"
+      required
+    />
+
     <label for="mark_up">Mark_up:</label>
-    <input type="number" id="mark_up" name="mark_up" placeholder="Mark_up" required>
-    
-    
-    
+    <input
+      type="number"
+      id="mark_up"
+      name="mark_up"
+      placeholder="Mark_up"
+      required
+    />
+
     <label for="manuf">Manufactory:</label>
     <select id="manuf" name="manuf_id">
       {% for manuf in all_manufs %}
       <option value="{{ manuf.id }}">{{ manuf.name }}</option>
       {% endfor %}
     </select>
-    
-    <br>
-    <br>
+
+    <br />
+    <br />
     <button type="submit">Add Product</button>
-    
   </form>
-  
-  
 </section>
-  
-  {% endblock %}
-  
+
+{% endblock %}

@@ -1,12 +1,25 @@
-{% extends 'base.html' %} 
-{% block content %}
-
-<div>
-  <p>{{manuf.name}}</p>
-
-  <p>{{manuf.description}}</p>
-  
-  <p><a href="/manufs/{{manuf.id}}/edit">Edit</a></p>
-</div>
+{% extends 'base.html' %} {% block content %}
+<section class="show-1">
+  <div class="item-1">
+    <h1>About the Manufactory</h1>
+    <p>{{manuf.name}}</p>
+    <p>{{manuf.info}}</p>
+    <br />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
+      voluptatibus nemo commodi nisi ad corrupti qui fugit, sapiente nesciunt,
+      voluptate repellendus voluptas pariatur. Laboriosam dicta illum quos eos
+      quisquam ducimus eius ut consectetur autem voluptatibus laudantium enim,
+      mollitia iure, quas eligendi est temporibus cum reprehenderit culpa optio.
+      Repellendus, tempore repellat omluptatae dolorem voluptatibus molestiae
+      quibusdam fugit omnis odit ipsam, placeat exercitationem itaque sit! Quia
+      vel officiis deserunt, cum officia laudantium. Voluptates numquam deleniti
+      quos!
+    </p>
+  </div>
+  <div class="item-2">
+    <p><a href="/manufs/{{manuf.id}}/edit">Edit It</a></p>
+  </div>
+</section>
 
 {% endblock %}

@@ -1,6 +1,8 @@
 footer{
     height: 10vh;
-    background-color: magenta;
+    /* background-color: magenta; */
+    background-color: skyblue;
+    /* background-image: url(../image/pexels-maxyne-barcel-10402280.jpg); */
     text-align: center;
 
 }
