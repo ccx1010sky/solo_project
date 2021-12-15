@@ -1,8 +1,7 @@
-{% extends 'base.html' %} 
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 <section class="delete-manuf">
   {% for manuf in all_manufs %}
-  <table>
+  <table id="talbe-2">
     <tr>
       <th>Name</th>
       <th>Info</th>
@@ -10,7 +9,6 @@
     </tr>
     <tr>
       <td><a href="/manufs/{{manuf.id}}">{{manuf.name}}</a></td>
-
       <td><div class="name">{{manuf.info}}</div></td>
       <td>
         <div class="buttons">
@@ -19,7 +17,7 @@
             action="/manufs/{{manuf.id}}/delete"
             method="POST"
           >
-            <button class="trash-button">delete</button>
+            <button class="trash-button">Delete</button>
           </form>
         </div>
       </td>

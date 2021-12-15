@@ -1,0 +1,34 @@
+th {
+  box-shadow: 0 5px 10px lightblue;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 1rem;
+
+}
+td {
+  box-shadow: 0 5px 10px lightblue;
+  color: rgb(143, 107, 31);
+  padding: 1rem;
+  text-align: center;
+
+}
+.table-1 {
+  width: 100vw;
+  height: 30px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  box-shadow: 0 5px 10px lightblue;
+  background-color: white;
+  overflow: hidden;
+  text-align: left;
+}
+.table-2 {
+  width: 100vw;
+  height: 30px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  box-shadow: 0 5px 10px lightblue;
+  background-color: white;
+  overflow: hidden;
+  text-align: left;
+}

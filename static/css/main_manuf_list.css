@@ -1,1 +1,9 @@
 /* manufactory list page */
+.delete-manuf {
+  width: 40%;
+  margin: 60px auto;
+  align-items: center;
+  display: grid;
+
+  justify-content: center;
+}
