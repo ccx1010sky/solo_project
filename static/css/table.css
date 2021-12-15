@@ -2,13 +2,13 @@ th {
   box-shadow: 0 5px 10px lightblue;
   border-collapse: collapse;
   text-align: center;
-  padding: 1rem;
+  padding: 6px;
 
 }
 td {
   box-shadow: 0 5px 10px lightblue;
   color: rgb(143, 107, 31);
-  padding: 1rem;
+  padding: 10px;
   text-align: center;
 
 }

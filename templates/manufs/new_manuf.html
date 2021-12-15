@@ -1,21 +1,47 @@
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
-<form class="add-manuf" action="/manufs" method="post">
+<section class="form-3">
+  <div>
+    <h1>Add New Supplier</h1>
 
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae dolorum,
+      voluptate earum eveniet saepe cum ipsum quod tempore nobis perspiciatis
+      hic error exercitationem molestiae voluptatum labore iste. Nam quo
+      deserunt impedit aut in dolorem. Animi provident aliquid pariatur
+      molestiae maiores itaque harum quae minima aspernatur recusandae cum fugit
+      et a vero neque commodi doloremque unde quos error, molestias iusto vel
+      natus? Esse atque, placeat quia molestiae harum deserunt fugit accusantium
+      perferendis qui dolorem exercitationem, aliquid praesentium, possimus
+      nulla dolores? Beatae magnam cum iste officiis id vero doloribus esse,
+      ipsa dolore. Omnis alias itaque quo voluptatibus earum suscipit saepe
+      delectus exercitationem.
+    </p>
+  </div>
+  <div>
+    <form class="add-manuf" action="/manufs" method="post">
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Name"
+        required
+        autofocus
+      />
 
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" placeholder="Name" required autofocus>
+      <label for="info">Info:</label>
+      <input
+        type="text"
+        id="info"
+        name="info"
+        placeholder="Info"
+        required
+        autofocus
+      />
 
-
-
-    <label for="info">Info:</label>
-    <input type="text" id="info" name="info" placeholder="Info" required autofocus>
-    
-
-   <button type="submit">Add Manufactory</button>
-
-</form>
-
-    
-{% endblock  %}
+      <button id="button-3" type="submit">Add Manufactory</button>
+    </form>
+  </div>
+</section>
+{% endblock %}
