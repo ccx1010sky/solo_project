@@ -1,44 +1,46 @@
 {% extends 'base.html' %} 
-{% block content %} 
 
-{% for product in all_products %}
-<div class="product">
-  <div class="content">
-    <div class="name">
-      <table>
-        <tr>
-          <th>Name</th>
-          <th>Description</th>
-          <th>Stock_quantity</th>
-          <th>Cost</th>
-          <th>Selling_price</th>
-          <th>Mark_up</th>
-          <th>Manufactory</th>
-        </tr>
-        <tr>
-          <td><a href="/products/{{product.id}}">{{product.name}}</a></td>
-          <td>{{product.description}}</td>
-          <td>{{product.stock_quantity}}</td>
-          <td>{{product.cost}}</td>
-          <td>{{product.selling_price}}</td>
-          <td>{{product.mark_up}}</td>
-          <td>
-            <p><i>{{product.manuf.name}}</i></p>
-          </td>
-        </tr>
-      </table>
-    </div>
+{% block content %}
 
-    <div class="buttons">
-      <form
-        class="delete-form"
-        action="/products/{{product.id}}/delete"
-        method="POST"
-      >
-        <button class="trash-button">delete</button>
-      </form>
-    </div>
-  </div>
+<div class="table-container">
+ 
+    {% for product in all_products %}
+    <table class="table-data">
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Stock_quantity</th>
+        <th>Cost</th>
+        <th>Selling_price</th>
+        <th>Mark_up</th>
+        <th>Manufactory</th>
+        <th>Action</th>
+      </tr>
+      
+      <tr>
+        <td><a href="/products/{{product.id}}">{{product.name}}</a></td>
+        <td>{{product.description}}</td>
+        <td>{{product.stock_quantity}}</td>
+        <td>{{product.cost}}</td>
+        <td>{{product.selling_price}}</td>
+        <td>{{product.mark_up}}</td>
+
+        <td><p><i>{{product.manuf.name}}</i></p></td>
+
+        <td>
+          <div class="buttons">
+            <form
+              class="delete-form"
+              action="/products/{{product.id}}/delete"
+              method="POST"
+            >
+              <button class="trash-button">delete</button>
+            </form>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+  {% endfor %} 
 </div>
-{% endfor %} 
 {% endblock %}

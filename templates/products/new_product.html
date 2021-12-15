@@ -1,71 +1,45 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<br>
-<br>
-
-<hr>
-<hr>
-<h1>add new</h1>
-<form action="/products" method="post">
-
-  <div>
+<section class="container-1">
+  
+  <form class="submit-form"action="/products" method="post">
+    
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" placeholder="Name" required autofocus>
-  </div>
-
-  <div>
+    
     <label for="description">Description:</label>
     <input type="text" id="description" name="description" placeholder="Description" required autofocus>
-  </div>
-
-  <div>
+    
     <label for="stock_quantity">Stock_quantity:</label>
     <input type="number" id="stock_quantity" name="stock_quantity" placeholder="stock_quantity" required>
-  </div>
-
-  <div>
+    
     <label for="cost">Cost:</label>
     <input type="number" id="cost" name="cost" placeholder="Cost" required>
-  </div>
-
-  <div>
+    
     <label for="selling_price">Selling_price:</label>
     <input type="number" id="selling_price" name="selling_price" placeholder="Selling_price" required>
-  </div>
-
-  <div>
+    
     <label for="mark_up">Mark_up:</label>
     <input type="number" id="mark_up" name="mark_up" placeholder="Mark_up" required>
-  </div>
-
-  <!-- <div>
-    <label for="manuf">Manufactory:</label>
-    <input type="number" id="manuf" name="manuf" placeholder="Manufactory" required>
-  </div> -->
-
-  <div>
+    
+    
+    
     <label for="manuf">Manufactory:</label>
     <select id="manuf" name="manuf_id">
       {% for manuf in all_manufs %}
-        <option value="{{ manuf.id }}">{{ manuf.name }}</option>
+      <option value="{{ manuf.id }}">{{ manuf.name }}</option>
       {% endfor %}
     </select>
-  </div>
-
-
-  <button type="submit">Add Product</button>
-
-</form>
-
-    <h1>add new</h1>
-
-    <br>
-    <br>
-    <br>
-    <br>
     
-    <hr>
-    <hr>
+    <br>
+    <br>
+    <button type="submit">Add Product</button>
     
-{% endblock %}
+  </form>
+  
+  
+</section>
+  
+  {% endblock %}
+  

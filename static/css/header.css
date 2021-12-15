@@ -1,0 +1,28 @@
+header {
+  height: 30vh;
+  background-color: mediumspringgreen;
+}
+.header-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+ul li {
+  display: inline-flex;
+  list-style-type: none;
+  margin: 20px 30px;
+}
+
+ul li a {
+  text-decoration: rgb(8, 10, 10);
+  text-shadow: 1px 1px 1px rgb(151, 24, 45);
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  color: cornflowerblue;
+}

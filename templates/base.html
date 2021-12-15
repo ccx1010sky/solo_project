@@ -8,46 +8,81 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='css/style.css') }}"
     />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main_product_list.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main_addnew_product.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main_add_manuf.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main_manuf_list.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/base.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/header.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/footer.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/index.css') }}"
+    />
+
     <title>Shop Inventory</title>
   </head>
+
   <body>
-    <header>
-      <section class="header-content">
-        <h1>Shop Inventory Admin</h1>
-        <nav>
-          <ul>
-            <li><a href="/products">Products List</a></li>
-            <li><a href="/products/new_product">Add new product</a></li>
-            <li><a href="/manufs">Manufactory List</a></li>
-            <li><a href="/manufs/new_manuf">Add Manufactory</a></li>
-          </ul>
-        </nav>
-      </section>
-    </header>
-    <hr />
+    <div class="wrapper">
+      <header>
+        <div class="header-container">
+          <h1>Shop Inventory Admin</h1>
+          <nav>
+            <ul>
+              <li><a href="/products">Products List</a></li>
+              <li><a href="/products/new_product">Add new product</a></li>
+              <li><a href="/manufs">Manufactory List</a></li>
+              <li><a href="/manufs/new_manuf">Add Manufactory</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
 
-    <main>
-      <section class='about'>
-        <h1>About</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-          consectetur cupiditate nisi nulla, officia iusto, eaque praesentium
-          quae eveniet, qui consequuntur recusandae nemo dolores modi totam
-          enim? Cum sint libero inventore molestiae eveniet aliquam voluptates
-          provident sit, ex atque sapiente.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt cumque
-          quis, aut natus quasi facere. Quis, laborum, dolorem laudantium nisi
-          error maiores aperiam atque cum officia vel illo itaque earum?
-        </p>
-        {% block home %} 
-        {% endblock %}
-      </section>
-      <hr />
-      {% block content %} {% endblock %}
-    </main>
+      <main class="main-container">
+        <!-- <section>
+          <h1>About</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+            consectetur cupiditate nisi nulla, officia iusto, eaque praesentium
+            quae eveniet, qui consequuntur recusandae nemo dolores modi totam
+            enim? Cum sint libero inventore molestiae eveniet aliquam voluptates
+            provident sit, ex atque sapiente.
+          </p>
+        </section> -->
+        {% block home %} {% endblock %}
 
-    
+        {% block content %} {% endblock %}
+      </main>
+
+      <footer>
+        <h1>footer</h1>
+      </footer>
+    </div>
   </body>
 </html>

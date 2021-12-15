@@ -1,0 +1,47 @@
+
+/* products list table------------ */
+.table-container {
+  display: inline;
+  margin: 0 auto;
+
+  align-items: center; 
+  text-align: center;
+  justify-content: center;
+}
+
+.table-head {
+  
+  width: 100vw;
+  height: 30px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  box-shadow: 0 5px 10px lightblue;
+  background-color: rgb(236, 223, 223);
+  text-align: left;
+  overflow: hidden;
+
+}
+.table-data {
+  width: 100vw;
+  height: 30px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  box-shadow: 0 5px 10px lightblue;
+  background-color: white;
+  overflow: hidden;
+  text-align: left;
+}
+
+th {
+  box-shadow: 0 5px 10px lightblue;
+  text-align: center;
+  /* padding: 10px; */
+}
+td {
+  box-shadow: 0 5px 10px lightblue;
+  color: rgb(143, 107, 31);
+  padding: 10px;
+  text-align: center;
+  padding: 10px;
+}
+/* -------------------------------------- */

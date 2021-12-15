@@ -1,0 +1,21 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 300;
+}
+
+/* html,
+body {
+  height: 140vh;
+  background-color: darkkhaki;
+} */
+
+.wrapper{
+    display: grid;
+    grid-template-rows: 300px, 600px, 50px;
+    grid-gap: 5px;
+    grid-area: ;
+
+}

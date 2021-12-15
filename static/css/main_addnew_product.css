@@ -1,0 +1,19 @@
+/* add new product */
+.submit-form {
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-form label {
+  display: block;
+}
+
+.add-manuf {
+  display: block;
+}
+.add-manuf lable {
+  display: block;
+}
+.add-manuf div {
+  margin: 10px;
+}
