@@ -1,11 +1,14 @@
-# solo_project
+
+#solo_project
+#techskill sets
+# Python, flask framework,jinja2,postgresql,HTML/CSS
+
 #Download and run flask app:
 #command line:
 $git clone git@github.com:ccx1010sky/solo_project.git
 $cd solo_project
 
 #Installation
-
 solo_project$pip3 install Flask
 solo_project$pip3 install python-dotenv
 solo_project$pip3 install psycopg2
